@@ -107,6 +107,8 @@ h2 {
 
 /*******************************************************/
 button {
+  display: flex;
+  align-items: center;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -152,10 +154,68 @@ button::first-letter {
 }
 
 img {
+  border-radius: 10px;
   position: absolute;
   left: 50%;
   top: 16.5rem;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    height: 95%;
+    margin: 0 1rem;
+    display: block;
+    padding-top: 4.5rem;
+  }
+  button {
+    font-size: 1.5em;
+    transform: none;
+    justify-content: center;
+  }
+  .player {
+    padding: 2rem;
+    height: 200px;
+  }
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 0rem;
+  }
+  .score {
+    font-size: 3.5rem;
+  }
+  .current {
+    padding: 1rem;
+    width: 15rem;
+  }
+  .current-label {
+    margin-bottom: 0;
+  }
+  .current-score {
+    font-size: 2rem;
+  }
+  .btn-new {
+    top: 0.5rem;
+    left: 28%;
+  }
+  img {
+    top: auto;
+    bottom: 6rem;
+    height: 7rem;
+  }
+  .btn-roll {
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    width: 45%;
+  }
+  .btn-hold {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    left: auto;
+    width: 45%;
+  }
 }
